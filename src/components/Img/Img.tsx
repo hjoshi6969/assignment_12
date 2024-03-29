@@ -9,6 +9,12 @@ const StyledImg = styled.img<ImgProps>`
     css`
         filter: grayscale(0%);
     `}
+    ${(props) =>
+    props.disabled &&
+    css`
+        filter: grayscale(100%);
+        cursor: not-allowed;
+    `}
 
 `;
 
@@ -19,6 +25,7 @@ const Img = (props: ImgProps) => {
           src={props.src}
           width={props.width}
           height={props.height}
+          disabled={props.disabled}
         >
         </StyledImg>
     );

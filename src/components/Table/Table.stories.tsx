@@ -1,7 +1,7 @@
 import Table from './Table';
 
 export default {
-  title: 'Table',
+  title: 'table/Table',
   component: Table,
   tags: ['autodocs'],
   parameters: {
@@ -16,6 +16,12 @@ export const Default = {
     },
   };
 
-
+export const Disabled = {
+    args: {
+      content: 'Button',
+      disabled: true,
+      Items: 4,
+    },
+  };
 
   

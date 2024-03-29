@@ -42,6 +42,13 @@ const StyledCell = styled.div<CellProps>`
         }
     }
     `}
+
+    ${(props) =>
+    props.disabled &&
+    css`
+        filter: grayscale(100%);
+        cursor: not-allowed;
+    `}
 `;
 
 const Cell = (props: CellProps) => {
@@ -50,6 +57,7 @@ const Cell = (props: CellProps) => {
             content={props.content}
             CSS={props.CSS}
             Header={props.Header}
+            disabled={props.disabled}
         ><div>{props.content}</div></StyledCell>
     );
 };

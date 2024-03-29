@@ -5,15 +5,24 @@ import TableRow from '../TableRow/TableRow';
 
 const StyledTable = styled.div<TableProps>`
   display: grid;
-
+  ${(props) =>
+    props.disabled &&
+    css`
+        filter: grayscale(100%);
+        cursor: not-allowed;
+    `}
 `;
 
 const Table = (props: TableProps) => {
     return (
         <StyledTable
           Items={props.Items}
+          disabled={props.disabled}
         >
-          <TableRow Items={1} content={<Cell content='Front End Skills' Header={true}></Cell>}></TableRow>
+          <TableRow Items={1} content={
+            <Cell content='Front End Skills' Header={true}></Cell>
+          }></TableRow>
+
           <TableRow Items={props.Items} content={
             <>
                 <Cell content='HTML'></Cell>
@@ -22,8 +31,9 @@ const Table = (props: TableProps) => {
                 <Cell content='React'></Cell>
                 <Cell content='Ruby on Rails'></Cell>
             </>
-          }></TableRow>
-
+          }>
+           
+          </TableRow>
         </StyledTable>
     );
 };

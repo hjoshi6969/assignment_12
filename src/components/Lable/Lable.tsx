@@ -22,6 +22,13 @@ const StyledLable = styled.div<LableProps>`
             color: grey;
         }
     `}
+
+    ${(props) =>
+    props.disabled &&
+    css`
+        filter: grayscale(100%);
+        cursor: not-allowed;
+    `}
 `;
 
 const Lable = (props: LableProps) => {
@@ -31,6 +38,7 @@ const Lable = (props: LableProps) => {
           job={props.job}
           PC={props.PC}
           Mobile={props.Mobile}
+          disabled={props.disabled}
         >
           {props.name}
           {!props.Mobile ? <span>-</span> : null}

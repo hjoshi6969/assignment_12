@@ -25,3 +25,11 @@ export const Mobile = {
       content: 'option 1',
     },
   };
+
+    
+export const Disabled = {
+  args: {
+    disabled: true,
+    content: 'option 1',
+  },
+};

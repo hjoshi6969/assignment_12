@@ -44,7 +44,7 @@ const RadioButton: React.FC<RadioButtonProps> = ({
       <RadioInput
         type="radio"
         checked={checked}
-        onChange={handleChange} // Use onChange event, not onClick
+        onChange={handleChange}
       />
       {/* Radio label */}
       <RadioLabel>{label}</RadioLabel>

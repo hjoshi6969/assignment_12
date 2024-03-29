@@ -2,7 +2,7 @@ import TableRow from './TableRow';
 import Cell from '../Cell/Cell';
 
 export default {
-  title: 'components/TableRow',
+  title: 'Table/TableRow',
   component: TableRow,
   tags: ['autodocs'],
   parameters: {
@@ -22,6 +22,21 @@ export const Default = {
           <Cell content='React'></Cell>
           <Cell content='Ruby on Rails'></Cell>
       </>,
+    },
+  };
+
+  export const Disabled = {
+    args: {
+      Items: 4,
+      content:
+      <>
+          <Cell content='HTML'></Cell>
+          <Cell content='CSS' CSS={true}></Cell>
+          <Cell content='JS'></Cell>
+          <Cell content='React'></Cell>
+          <Cell content='Ruby on Rails'></Cell>
+      </>,
+      disabled: true,
     },
   };
 

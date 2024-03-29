@@ -17,4 +17,11 @@ export const checked = {
     },
   };
 
+export const Disabled = {
+    args: {
+      label: 'asd',
+      disabled: true,
+    },
+  };
+  
 

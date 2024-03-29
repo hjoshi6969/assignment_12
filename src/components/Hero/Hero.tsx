@@ -16,6 +16,12 @@ const StyledHero = styled.div<HeroProps>`
     height: 700px;
     }
     `}
+    ${(props) =>
+    props.disabled &&
+    css`
+        filter: grayscale(100%);
+        cursor: not-allowed;
+    `}
 `;
 
 const Hero = (props: HeroProps) => {
@@ -23,6 +29,7 @@ const Hero = (props: HeroProps) => {
         <StyledHero
            PC={props.PC}
            Mobile={props.Mobile}
+           disabled={props.disabled}
         >
             <Lable job='Web Developer' name='Himanshu Joshi' PC={props.PC} Mobile={props.Mobile}></Lable>
         </StyledHero>

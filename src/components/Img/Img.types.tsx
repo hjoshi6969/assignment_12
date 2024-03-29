@@ -3,4 +3,5 @@ export interface ImgProps {
     src: string;
     width: number;
     height: number;
+    disabled?: boolean;
 }

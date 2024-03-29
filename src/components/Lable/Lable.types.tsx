@@ -3,4 +3,5 @@ export interface LableProps {
     job: string;
     PC?: boolean;
     Mobile?: boolean;
+    disabled?: boolean;
 }

@@ -3,5 +3,6 @@ export interface RadioButtonProps {
     label: string;
     checked?: boolean;
     onClick?: (checked: boolean) => void;
+    disabled?: boolean;
   }
   

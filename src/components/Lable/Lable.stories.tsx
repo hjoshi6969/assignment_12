@@ -28,6 +28,13 @@ export const Mobile = {
     },
   };
 
+export const Disabled = {
+    args: {
+      disabled: true,
+      name: 'Himanshu Joshi',
+      job:'Web developer',
+    },
+  };
 
 
   

@@ -1,7 +1,7 @@
 import Cell from './Cell';
 
 export default {
-  title: 'components/Cell',
+  title: 'Table/Cell',
   component: Cell,
   tags: ['autodocs'],
   parameters: {
@@ -32,3 +32,11 @@ export const Header = {
       content: 'Table Heading',
     },
   };
+
+  
+export const Disabled = {
+  args: {
+    disabled: true,
+    content: 'CSS',
+  },
+};
