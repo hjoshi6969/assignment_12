@@ -1,8 +1,8 @@
-import Dropdown from './Dropdown';
+import Footer from './Footer';
 
 export default {
-  title: 'Dropdown',
-  component: Dropdown,
+  title: 'table/Footer',
+  component: Footer,
   tags: ['autodocs'],
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
@@ -12,15 +12,14 @@ export default {
 
 export const Default = {
     args: {
-      Clicked: false,
       disabled: false,
-      content: 'option 1',
+      background: 'red',
     },
   };
 
 export const Disabled = {
     args: {
       disabled: true,
-      content: 'option 1',
+      background: 'red',
     },
   };

@@ -1,4 +1,6 @@
+import { userEvent, within } from '@storybook/test';
 import RadioButton from './RadioButton';
+import { fireEvent } from '@storybook/test';
 
 export default {
   title: 'RadioButton',
@@ -13,15 +15,24 @@ export default {
 export const checked = {
     args: {
       label: 'asd',
-      checked: true,
+      background: 'red',
     },
+
+    play: async ({ canvasElement }: { canvasElement: HTMLElement }) => {
+      const canvas = within(canvasElement);
+      console.log(canvas.getByTestId('Radio'));
+      const radio = canvas.getByTestId('Radio');
+      await fireEvent.click(radio);    
+    }
   };
 
 export const Disabled = {
     args: {
       label: 'asd',
       disabled: true,
+      background: 'red',
     },
   };
+
   
 

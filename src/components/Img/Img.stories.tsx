@@ -16,6 +16,7 @@ export const Default = {
         src: 'https://th.bing.com/th/id/OIP._ZiGF6kngmC4k-ZtM_0tWwHaFO?rs=1&pid=ImgDetMain',
         width: 500,
         height: 300,
+        background: 'red',
     },
   };
 
@@ -25,6 +26,7 @@ export const hover = {
         src: 'https://th.bing.com/th/id/OIP._ZiGF6kngmC4k-ZtM_0tWwHaFO?rs=1&pid=ImgDetMain',
         width: 500,
         height: 300,
+        background: 'red',
     },
   };
 

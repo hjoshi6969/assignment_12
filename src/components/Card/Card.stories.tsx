@@ -14,6 +14,7 @@ export const Default = {
     args: {
       Clicked: false,
       disabled: false,
+      background: '#ffffff',
     },
   };
 

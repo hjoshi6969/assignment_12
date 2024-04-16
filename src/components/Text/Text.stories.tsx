@@ -10,13 +10,13 @@ export default {
   },
 } 
 
-export const Default = {
+export const Paragraph = {
   args: {
     content: 'Leorm Leorm Leorm Leorm Leorm Leorm Leorm Leorm ',
     disabled: false,
     heading: false,
-    subHeading: false,
-    highlighted: false,
+    background: 'red',
+
   },
 };
 
@@ -25,28 +25,8 @@ export const Heading = {
     content: 'Leorm Leorm Leorm Leorm Leorm Leorm Leorm Leorm ',
     disabled: false,
     heading: true,
-    subHeading: false,
-    highlighted: false,
-  },
-};
+    background: 'red',
 
-export const SubHeading = {
-  args: {
-    content: 'Leorm Leorm Leorm Leorm Leorm Leorm Leorm Leorm ',
-    disabled: false,
-    heading: false,
-    subHeading: true,
-    highlighted: false,
-  },
-};
-
-export const Highlighted = {
-  args: {
-    content: 'Leorm Leorm Leorm Leorm Leorm Leorm Leorm Leorm ',
-    disabled: false,
-    heading: false,
-    subHeading: false,
-    highlighted: true,
   },
 };
 
@@ -55,7 +35,7 @@ export const Disabled = {
     content: 'Leorm Leorm Leorm Leorm Leorm Leorm Leorm Leorm ',
     disabled: true,
     heading: false,
-    subHeading: false,
-    highlighted: false,
+    background: 'red',
+
   },
 };

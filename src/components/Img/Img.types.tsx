@@ -4,4 +4,5 @@ export interface ImgProps {
     width: number;
     height: number;
     disabled?: boolean;
+    background: string;
 }

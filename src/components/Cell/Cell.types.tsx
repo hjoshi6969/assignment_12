@@ -3,4 +3,5 @@ export interface CellProps {
     CSS?: boolean;
     Header?: boolean;
     disabled?: boolean;
+    background: string;
 }

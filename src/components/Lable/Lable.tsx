@@ -5,6 +5,7 @@ const StyledLable = styled.div<LableProps>`
   font-size  : 40px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
+  background-color: ${(props) => props.background};
   ${(props) =>
     props.PC &&
     css`
@@ -39,6 +40,7 @@ const Lable = (props: LableProps) => {
           PC={props.PC}
           Mobile={props.Mobile}
           disabled={props.disabled}
+          background={props.background}
         >
           {props.name}
           {!props.Mobile ? <span>-</span> : null}

@@ -15,6 +15,7 @@ export const PC = {
       PC: true,
       Mobile: false,
       content: 'option 1',
+      background: 'red',
     },
   };
 
@@ -23,6 +24,7 @@ export const Mobile = {
       PC: false,
       Mobile: true,
       content: 'option 1',
+      background: 'red',
     },
   };
 
@@ -31,5 +33,6 @@ export const Disabled = {
   args: {
     disabled: true,
     content: 'option 1',
+    background: 'red',
   },
 };

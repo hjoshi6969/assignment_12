@@ -1,54 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
+import { RadioButtonProps } from './RadioButton.types';
+import styled, { css } from 'styled-components';
+import Lable from '../Lable/Lable';
 
-export interface RadioButtonProps {
-  label: string;
-  checked?: boolean;
-  onClick?: (checked: boolean) => void;
-}
-
-// Styled components for the radio button
-const RadioContainer = styled.label<{ checked?: boolean }>`
+const StyledRadioWrapper = styled.label<RadioButtonProps>`
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 8px;
+  
+  ${(props) =>
+    props.disabled &&
+    css`
+      cursor: not-allowed;
+      opacity: 0.5;
+    `}
 `;
 
-const RadioInput = styled.input`
-  margin-right: 8px;
-`;
-
-const RadioLabel = styled.span`
-  font-size: 16px;
-`;
-
-// RadioButton component
-const RadioButton: React.FC<RadioButtonProps> = ({
-  label,
-  checked = false,
-  onClick,
-}) => {
-  // Function to handle radio button change
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const isChecked = event.target.checked;
-    if (onClick) {
-      // Call onClick callback with the new checked state
-      onClick(isChecked);
-    }
-  };
-
+const RadioButton: React.FC<RadioButtonProps> = ({ disabled, background, label }) => {
   return (
-    <RadioContainer checked={checked}>
-      {/* Radio input */}
-      <RadioInput
+    <StyledRadioWrapper 
+      disabled={disabled}
+      background={background}
+      label='radio'
+      className='x'
+    >
+      <input
         type="radio"
-        checked={checked}
-        onChange={handleChange}
+        disabled={disabled}
+        data-testid="Radio"
       />
-      {/* Radio label */}
-      <RadioLabel>{label}</RadioLabel>
-    </RadioContainer>
+
+      {label}
+    </StyledRadioWrapper>
   );
 };
 

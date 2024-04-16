@@ -1,8 +1,7 @@
 // RadioButton.types.ts
 export interface RadioButtonProps {
-    label: string;
-    checked?: boolean;
-    onClick?: (checked: boolean) => void;
     disabled?: boolean;
+    background: string;
+    label:string;
   }
   

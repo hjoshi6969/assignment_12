@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 
 const StyledImg = styled.img<ImgProps>`
     filter: grayscale(100%);
-
+    background-color: ${(props) => props.background};
     ${(props) =>
     props.hover &&
     css`
@@ -26,6 +26,7 @@ const Img = (props: ImgProps) => {
           width={props.width}
           height={props.height}
           disabled={props.disabled}
+          background={props.background}
         >
         </StyledImg>
     );

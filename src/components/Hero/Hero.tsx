@@ -5,7 +5,7 @@ import Lable from '../Lable/Lable';
 const StyledHero = styled.div<HeroProps>`
     width: 700px;
     height: 400px;
-    background-color: #f1e8e6;
+    background-color: ${(props) => props.background};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +30,7 @@ const Hero = (props: HeroProps) => {
            PC={props.PC}
            Mobile={props.Mobile}
            disabled={props.disabled}
+           background={props.background}
         >
             <Lable job='Web Developer' name='Himanshu Joshi' PC={props.PC} Mobile={props.Mobile}></Lable>
         </StyledHero>

@@ -4,4 +4,5 @@ export interface LableProps {
     PC?: boolean;
     Mobile?: boolean;
     disabled?: boolean;
+    background: string;
 }

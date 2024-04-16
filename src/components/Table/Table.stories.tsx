@@ -12,7 +12,8 @@ export default {
 
 export const Default = {
     args: {
-      Items: 4,
+      Items: 1,
+      background: 'red',
     },
   };
 
@@ -20,7 +21,8 @@ export const Disabled = {
     args: {
       content: 'Button',
       disabled: true,
-      Items: 4,
+      Items: 1,
+      background: 'red',
     },
   };
 

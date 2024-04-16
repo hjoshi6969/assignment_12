@@ -16,6 +16,7 @@ export const PC = {
       job:'Web developer',
       PC: true,
       Mobile: false,
+      background: 'red',
     },
   };
 
@@ -25,6 +26,7 @@ export const Mobile = {
       job:'Web developer',
       PC: false,
       Mobile: true,
+      background: 'red',
     },
   };
 
@@ -33,6 +35,7 @@ export const Disabled = {
       disabled: true,
       name: 'Himanshu Joshi',
       job:'Web developer',
+      background: 'red',
     },
   };
 

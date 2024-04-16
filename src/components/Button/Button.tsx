@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 
 const StyledButton = styled.button<ButtonProps>`
   border: none;
-  background-color: #ea4f4f;
+  background-color: ${(props) => props.background};
   padding: 16px 32px;
   border-radius: 10px;
   color: white;
@@ -39,6 +39,7 @@ const Button = (props: ButtonProps) => {
           content={props.content}
           clicked={props.clicked}
           hovered={props.hovered}
+          background={props.background}
         >
           {props.content}
         </StyledButton>

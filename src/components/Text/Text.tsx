@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 const StyledText = styled.p<TextProps>`
   font-size: 16px;
   color: #333;
-
+  background-color: ${(props) => props.background};
   ${(props) =>
     props.disabled &&
     css`
@@ -21,20 +21,6 @@ const StyledText = styled.p<TextProps>`
       font-weight: bold;
       text-decoration: underline;
     `}
-
-  ${(props) =>
-    props.subHeading &&
-    css`
-      font-weight: 600;
-    `}
-
-  ${(props) =>
-    props.highlighted &&
-    css`
-      font-size: 25px;
-      font-weight: bold;
-      font-style: italic;
-    `}
 `;
 
 const Text = (props: TextProps) => {
@@ -42,8 +28,7 @@ const Text = (props: TextProps) => {
         <StyledText
           disabled={props.disabled}
           heading={props.heading}
-          subHeading={props.subHeading}
-          highlighted={props.highlighted}
+          background={props.background}
           content={props.content}
         >
           {props.content}

@@ -14,6 +14,7 @@ export const Default = {
     args: {
       CSS: false,
       content: 'CSS',
+      background: 'red',
     },
   };
 
@@ -22,6 +23,7 @@ export const CSS = {
       CSS: true,
       Header: false,
       content: 'CSS',
+      background: 'red',
     },
   };
 
@@ -30,6 +32,7 @@ export const Header = {
       CSS: false,
       Header:true,
       content: 'Table Heading',
+      background: 'red',
     },
   };
 
@@ -38,5 +41,6 @@ export const Disabled = {
   args: {
     disabled: true,
     content: 'CSS',
+    background: 'red',
   },
 };

@@ -4,7 +4,7 @@ import styled, {css} from 'styled-components';
 const StyledCell = styled.div<CellProps>`
 
     
-    background-color: #f55951;
+    background-color: ${(props) => props.background};
     color: white;
     border-radius: 4px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -28,7 +28,7 @@ const StyledCell = styled.div<CellProps>`
         font-size: 32px;
         font-weight: bold;
         div {
-        }
+        
         }
     `}
 
@@ -58,6 +58,7 @@ const Cell = (props: CellProps) => {
             CSS={props.CSS}
             Header={props.Header}
             disabled={props.disabled}
+            background={props.background}
         ><div>{props.content}</div></StyledCell>
     );
 };

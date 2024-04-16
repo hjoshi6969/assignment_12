@@ -14,6 +14,7 @@ export const Default = {
     args: {
       content: 'Button',
       disabled: false,
+      background: 'red',
     },
   };
 
@@ -22,6 +23,7 @@ export const Disabled = {
     args: {
       content: 'Button',
       disabled: true,
+      background: 'red',
     },
   };
   
@@ -30,15 +32,7 @@ export const hovered = {
       content: 'Button',
       disabled: false,
       hovered: true,
-    },
-  };
-
-export const clicked = {
-    args: {
-      content: 'Button',
-      disabled: false,
-      hovered: true,
-      clicked: true,
+      background: 'red',
     },
   };
 

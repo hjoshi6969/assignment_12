@@ -22,6 +22,8 @@ export const Default = {
           <Cell content='React'></Cell>
           <Cell content='Ruby on Rails'></Cell>
       </>,
+      background: 'red',
+
     },
   };
 
@@ -37,6 +39,8 @@ export const Default = {
           <Cell content='Ruby on Rails'></Cell>
       </>,
       disabled: true,
+      background: 'red',
+
     },
   };
 

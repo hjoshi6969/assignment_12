@@ -18,6 +18,8 @@ export const Default = {
       <>
           <Cell content='HTML' Header={true}></Cell>
       </>,
+      background: 'red',
+
     },
   };
 
@@ -29,6 +31,8 @@ export const Default = {
         <Cell content='HTML' Header={true}></Cell>
       </>,
       disabled: true,
+      background: 'red',
+
     },
   };
 
