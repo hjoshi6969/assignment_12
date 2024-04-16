@@ -1,30 +1,72 @@
-# React + TypeScript + Vite
+# Node.js + React + Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get a Node.js web application running with React inside a Docker container.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js: Backend server setup using Node.js.
+- React: Frontend UI developed with React.
+- Docker: Containerized application for easy deployment.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Docker Desktop installed on your machine.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### 1. Open Docker Desktop
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Launch Docker Desktop on your machine.
+
+### 2. Clone the Repository
+
+- Open a terminal or command prompt.
+- Clone this repository to your local machine:
+
+git clone https://github.com/your-username/your-node-react-app.git
+
+
+### 3. Navigate to the Project Directory
+
+- Navigate to the project directory:
+
+cd your-node-react-app
+
+
+### 4. Build the Docker Image
+
+- Build the Docker image using the following command:
+
+docker build -t my-node-react-app .
+
+
+### 5. Run the Docker Container
+
+- Run the Docker container and map port 3000 inside the container to port 8083 on your host machine:
+
+docker run -p 8083:3000 my-node-react-app
+
+
+### 6. Access the Web Application
+
+- Open a web browser and navigate to http://localhost:8083.
+- You should see a message saying "Hello, Docker!" displayed on the screen.
+
+## Stopping the Container
+
+To stop the Docker container, you can use the following command:
+
+docker run -p 8083:3000 my-node-react-app
+
+
+### 6. Access the Web Application
+
+- Open a web browser and navigate to http://localhost:8083.
+- You should see a message saying "Hello, Docker!" displayed on the screen.
+
+## Stopping the Container
+
+To stop the Docker container, you can use the following command:
+
+docker stop $(docker ps -q --filter ancestor=my-node-react-app)
+
