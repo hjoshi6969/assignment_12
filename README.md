@@ -30,7 +30,7 @@ git clone https://github.com/your-username/your-node-react-app.git
 
 - Navigate to the project directory:
 
-cd your-node-react-app
+```cd your-node-react-app```
 
 
 ### 4. Build the Docker Image
