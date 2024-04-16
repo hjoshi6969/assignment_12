@@ -37,14 +37,14 @@ git clone https://github.com/your-username/your-node-react-app.git
 
 - Build the Docker image using the following command:
 
-docker build -t my-node-react-app .
+```docker build -t my-node-react-app .```
 
 
 ### 5. Run the Docker Container
 
 - Run the Docker container and map port 3000 inside the container to port 8083 on your host machine:
 
-docker run -p 8083:3000 my-node-react-app
+```docker run -p 8083:3000 my-node-react-app```
 
 
 ### 6. Access the Web Application
@@ -56,7 +56,7 @@ docker run -p 8083:3000 my-node-react-app
 
 To stop the Docker container, you can use the following command:
 
-docker run -p 8083:3000 my-node-react-app
+```docker run -p 8083:3000 my-node-react-app```
 
 
 ### 6. Access the Web Application
