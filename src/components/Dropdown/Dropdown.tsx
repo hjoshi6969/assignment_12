@@ -1,33 +1,57 @@
-import { DropdownProps } from './Dropdown.types';
-import styled, {css} from 'styled-components';
+import React, { useState } from 'react';
 
-const StyledDropdown = styled.select<DropdownProps>`
 
-    border: none;
-    padding: 16px 32px;
-    background-color: ${(props) => props.background};
-    color: white;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+const Dropdown: React.FC<DropdownProps> = ({
+  clicked,
+  disabled,
+  content,
+  background,
+  items = [],
+  onSelect,
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    &:focus {
-        border-radius: 4px;
+  const handleDropdownClick = () => {
+    if (!disabled) {
+      setIsOpen(!isOpen);
     }
-`;
+  };
 
-const Dropdown = (props: DropdownProps) => {
-    return (
-        <StyledDropdown 
-            disabled={props.disabled} 
-            content={props.content}
-            background={props.background}
-            data-testid="Dropdown"
-        >
-            <option value="">Option 1</option>
-            <option value="">Option 2</option>
-            <option value="">Option 3</option>
-        </StyledDropdown>
-    );
+  const handleItemClick = (item: string) => {
+    if (onSelect) {
+      onSelect(item);
+      setIsOpen(false);
+    }
+  };
+
+  return (
+    <div
+      data-testid="Dropdown"
+      onClick={handleDropdownClick}
+      style={{
+        backgroundColor: background,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        padding: '10px',
+        width: '150px',
+        textAlign: 'center',
+      }}
+    >
+      {content}
+      {isOpen && (
+        <div style={{ marginTop: '10px', backgroundColor: 'lightgrey' }}>
+          {items.map((item) => (
+            <div
+              key={item}
+              onClick={() => handleItemClick(item)}
+              style={{ padding: '5px', cursor: 'pointer' }}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Dropdown;
