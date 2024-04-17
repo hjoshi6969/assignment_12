@@ -9,9 +9,6 @@ jobs:
       COMPOSE_FILE: Dockerfile
 
     steps: 
-    - name: Checkout code
-      uses: action/checkout@v4
-
     - name: Build docker images
       run: docker build -t main -p $COMPOSE_FILE .
 
