@@ -10,7 +10,7 @@ jobs:
 
     steps: 
     - name: Build docker images
-      run: docker build -t main -p $COMPOSE_FILE .
+      run: docker build -t main -f $COMPOSE_FILE .
 
     - name: Run Tests
       run: docker run main
