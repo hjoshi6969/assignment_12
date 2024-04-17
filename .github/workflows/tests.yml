@@ -15,5 +15,5 @@ jobs:
     - name: Build docker images
       run: docker build -t main -f $COMPOSE_FILE .
 
-    - name: Run Tests
+    - name: Run ci-test
       run: docker run main
